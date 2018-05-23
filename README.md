@@ -5,3 +5,12 @@ STM32 ICE
 
 
 JLink hack reference (cht): https://www.amobbs.com/thread-5653964-1-1.html
+
+***
+
+**Cook a potato:**
+
+
+```arm-none-eabi-objcopy -I ihex --output-target=binary firmware.hex firmware.bin```
+
+```python stm32loader.py -p /dev/ttyUSB0  -e -w -v firmware.bin```
